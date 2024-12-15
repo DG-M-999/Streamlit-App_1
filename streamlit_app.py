@@ -68,23 +68,23 @@ rating = float(df_selection['Rating'].sum())
 
 total1,total2,total3,total4,total5=st.columns(5,gap='large')
 with total1:
-    st.info('Total Investment',icon="📌")
+    st.info('Total Investment',icon="💲")
     st.metric(label="Sum TZS", value=f"{total_investment:,.0f}")
 
-with total2:
-    st.info('Most Frequent',icon="📌")
+with total2:         
+    st.info('Most Frequent',icon="💲")
     st.metric(label="Mode TZS",value=f"{investment_mode:,.0f}")
 
 with total3:
-    st.info('Average',icon="📌")
+    st.info('Average',icon="💲")
     st.metric(label="Average TZS",value=f"{investment_mean:,.0f}")
 
 with total4:
-    st.info('Central Earnings',icon="📌")
+    st.info('Central Earnings',icon="💲")
     st.metric(label="Median TZS",value=f"{investment_median:,.0f}")
 
 with total5:
-    st.info('Ratings',icon="📌")
+    st.info('Ratings',icon="💲")
     st.metric(label="Rating",value=numerize(rating),help=f""" Total Rating: {rating} """)
 style_metric_cards(background_color="#1f252b",border_left_color="#d16f0d",border_color="#d16f0d",box_shadow="#F71938")
 
